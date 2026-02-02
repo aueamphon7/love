@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>หน้าแรก | รายงานการฝึกงาน</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #EEF2F7;
+    color: #2b2b2b;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(135deg, #0F2A44, #1F4E79);
+    color: white;
+    text-align: center;
+    padding: 50px 20px 45px;
+    position: relative;
+}
+.university-logo {
+    position: absolute;
+    top: 22px;
+    left: 35px;
+    width: 85px;
+}
+
+nav {
+    background: #0F2A44;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+nav a:hover {
+    background: #D4AF37;
+    color: #0F2A44;
+}
+
+.person-card {
+    background: white;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border-top: 6px solid #1F4E79;
+}
+.person-card h3 {
+    text-align: center;
+    color: #0F2A44;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 230px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 4px solid #1F4E79;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    filter: contrast(105%) saturate(105%);
+}
+/* ⭐ รูปแนวนอนสำหรับอาจารย์ที่มานิเทศ */
+.horizontal-img {
+    width: 320px;      /* กว้างกว่า */
+    height: 200px;     /* เตี้ยลง = แนวนอน */
+    object-fit: cover;
+    border-radius: 14px;
+    border: 4px solid #1F4E79;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    filter: contrast(105%) saturate(105%);
+}
+
+.flex-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.flex-group > div {
+    text-align: center;
+}
+
+.student-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+    width: 520px;
+}
+.student-card img {
+    width: 210px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 4px solid #1F4E79;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    filter: contrast(105%) saturate(105%);
+}
+
+footer {
+    background: #0F2A44;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+    .profile-img {
+        width: 170px;
+        height: 220px;
+    }
+    .student-card {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+    }
+    .student-card img {
+        width: 160px;
+        height: 210px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="https://bys.ac.th/byis/wp-content/uploads/2024/07/Buu-logo11-2048x2039.png" class="university-logo">
+    <h1>รายงานการฝึกงาน</h1>
+</header>
+
+<nav>
+    <a href="index.html">หน้าแรก</a>
+    <a href="profile.html">ข้อมูลพื้นฐาน</a>
+    <a href="duties.html">หน้าที่/ภาระงาน</a>
+    <a href="works.html">ผลงานระหว่างฝึก</a>
+    <a href="benefits.html">ประโยชน์ที่ได้รับ</a>
+    <a href="thesis.html">สารนิพนธ์</a>
+</nav>
+
+<!-- อาจารย์นิเทศ -->
+<div class="person-card">
+    <h3>อาจารย์นิเทศ</h3>
+    <div class="flex-group">
+        <div>
+            <img src="https://edu.buu.ac.th/assets/pic20240419/%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2/%E0%B8%94%E0%B8%B3%E0%B8%A3%E0%B8%B1%E0%B8%AA.png" class="profile-img">
+            <p>ผู้ช่วยศาสตราจารย์ ดร.ดำรัส อ่อนเฉวียง</p>
+        </div>
+    </div>
+</div>
+
+<!-- ครูพี่เลี้ยง -->
+<div class="person-card">
+    <h3>ครูพี่เลี้ยง</h3>
+    <div class="flex-group">
+        <div>
+            <img src="http://www.skb.ac.th/images/staffSkb/techno/TECHNO_Jeerarat.jpg" class="profile-img">
+            <p>นางสาวจีรารัตน์ เหลาแตว</p>
+        </div>
+        <div>
+            <img src="http://www.skb.ac.th/images/staffSkb/techno/TECHNO_ussadaporn.jpg" class="profile-img">
+            <p>นายอัษฎาพร พุทธภูมิ</p>
+        </div>
+    </div>
+</div>
+
+<!-- นิสิต -->
+<div class="person-card">
+    <h3>นิสิตฝึกงาน</h3>
+    <div class="flex-group">
+
+        <div class="student-card">
+            <img src="images/profile.jpg">
+            <div>
+                <h3>นางสาว เอื้อมพร คงมั่น</h3>
+                <p>รหัสนิสิต: 65040321</p>
+                <p>สาขาเทคโนโลยีดิจิทัลเพื่อการศึกษา<br>และคอมพิวเตอร์ศึกษา</p>
+            </div>
+        </div>
+
+        <div class="student-card">
+            <img src="https://scontent.fbkk6-1.fna.fbcdn.net/v/t39.30808-6/622992446_2129941427746722_8732307191208602107_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=GTA4jQTH9PoQ7kNvwH7abQY&_nc_oc=AdlMVcDscwGC2ohaHOeES6y00Z3EnAlVmSnISwuHI8jDClEWt05r0A9JKyKs0mpvwpw&_nc_zt=23&_nc_ht=scontent.fbkk6-1.fna&_nc_gid=L1L68OgyzC5C113Fnd8egA&oh=00_AfrPy5AwXWAfoyZfB3LXmkmoU6wGprSGG7di_HihcmCymw&oe=697F3DAA">
+            <div>
+                <h3>นางสาว ดวงหทัย คำประพันธ์</h3>
+                <p>รหัสนิสิต: 65040295</p>
+                <p>สาขาเทคโนโลยีดิจิทัลเพื่อการศึกษา<br>และคอมพิวเตอร์ศึกษา</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ⭐ อาจารย์ที่มานิเทศ -->
+<div class="person-card">
+    <h3>อาจารย์ที่มานิเทศ</h3>
+    <div class="flex-group">
+        <div>
+            <img src="https://scontent.fbkk6-1.fna.fbcdn.net/v/t39.30808-6/623262423_2129954827745382_7573172801701591785_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kMaCGuEn_mEQ7kNvwEeA9M1&_nc_oc=AdnT3dmB2eTo6lokp8GoUI-EGcpDNQLUQknzqaLVhLFkofMDpEn0P0-nks-9vYM5D08&_nc_zt=23&_nc_ht=scontent.fbkk6-1.fna&_nc_gid=mHHNi7TItpewEgEiZETwtQ&oh=00_AfpMcGs6Fj1TTlRw9XnGdt6ff1jqMLZ4w3RJ_YHCGit8ow&oe=697F3F03" class="horizontal-img">
+        </div>
+        <div>
+            <img src="https://scontent.fbkk6-2.fna.fbcdn.net/v/t39.30808-6/621645408_2129954291078769_2194082173621541545_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Jk3Ozkoj72kQ7kNvwG8dP5m&_nc_oc=AdmBQ40Cd6F1pU4SwuakLxCUOW9YkuUH1FzapdP2ApAqXpLQzNamTWpsxngF2ejRLRk&_nc_zt=23&_nc_ht=scontent.fbkk6-2.fna&_nc_gid=I_sekUdXJl5xnykljMARAg&oh=00_AfrTE3VJXVkhDnkzXQtv4NxB21a6C8TLqZPgsEnNlyhzpw&oe=697F3D62" class="horizontal-img">
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    © รายงานการฝึกงาน
+</footer>
+
+</body>
+</html>

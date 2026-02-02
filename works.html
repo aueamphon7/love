@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ผลงานระหว่างฝึกปฏิบัติ | รายงานการฝึกงาน</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #F4F6F9;
+    color: #333;
+}
+
+/* ===== Header ===== */
+header {
+    background: linear-gradient(135deg, #0F2A44, #1F4E79);
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+/* ===== Navigation ===== */
+nav {
+    background-color: #0F2A44;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 18px;
+}
+
+nav a:hover {
+    background-color: #D4AF37;
+    color: #0F2A44;
+    border-radius: 4px;
+}
+
+/* ===== Content ===== */
+.content {
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.work-card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.work-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.work-img:hover {
+    transform: scale(1.03);
+}
+
+/* ===== Lightbox ===== */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    text-align: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.2);
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #0F2A44;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* มือถือ */
+@media (max-width:768px){
+    .works-grid { grid-template-columns: 1fr; }
+    .work-img { height: 250px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>ผลงานระหว่างฝึกปฏิบัติ</h1>
+</header>
+
+<nav>
+    <a href="index.html">หน้าแรก</a>
+    <a href="profile.html">ข้อมูลพื้นฐาน</a>
+    <a href="duties.html">หน้าที่/ภาระงาน</a>
+    <a href="works.html">ผลงานระหว่างฝึก</a>
+    <a href="benefits.html">ประโยชน์ที่ได้รับ</a>
+    <a href="thesis.html">สารนิพนธ์</a>
+</nav>
+
+<section class="content">
+<div class="works-grid">
+
+<div class="work-card">
+<img src="https://image2url.com/r2/default/images/1770018157919-6c5a6aea-e127-4f07-8f54-5cbf508d515a.jpg" class="work-img">
+<p>ผลงานที่ 1</p>
+</div>
+
+<div class="work-card">
+<img src="https://image2url.com/r2/default/images/1770018669200-ef53db9c-9c99-4c52-86ef-7a7359fac050.jpg" class="work-img">
+<p>ผลงานที่ 2</p>
+</div>
+
+<div class="work-card">
+<img src="images/work3.jpg" class="work-img">
+<p>ผลงานที่ 3</p>
+</div>
+
+<div class="work-card">
+<img src="images/work4.jpg" class="work-img">
+<p>ผลงานที่ 4</p>
+</div>
+
+<div class="work-card">
+<img src="images/work5.jpg" class="work-img">
+<p>ผลงานที่ 5</p>
+</div>
+
+<div class="work-card">
+<img src="images/work6.jpg" class="work-img">
+<p>ผลงานที่ 6</p>
+</div>
+
+</div>
+</section>
+
+<footer>© รายงานการฝึกงาน</footer>
+
+<!-- ===== Lightbox HTML ===== -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<script>
+const images = document.querySelectorAll('.work-img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close');
+
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = "block";
+        lightboxImg.src = img.src;
+    });
+});
+
+closeBtn.onclick = () => lightbox.style.display = "none";
+lightbox.onclick = (e) => {
+    if(e.target !== lightboxImg) lightbox.style.display = "none";
+};
+</script>
+
+</body>
+</html>
